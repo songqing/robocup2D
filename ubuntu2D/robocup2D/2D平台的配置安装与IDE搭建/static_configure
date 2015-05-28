@@ -1,0 +1,17 @@
+librcsc编译
+1) 如果以前有对librcsc编译安装至系统的默认位置，运行下面的命令
+sudo make uninstall
+make distclean
+2) 然后对librcsc重新静态编译夏
+2.1 ./configure --prefix=$HOME/rcsc --disable-shared --enable-static 
+2.2 make
+2.3 make install
+
+agent2d上层
+1) 如果以前有对agent2d上层进行编译安装，则首先运行
+1.1 make uninstall
+1.2 make distclean
+2) 然后重新编译安装
+2.1 ./configure --with-librcsc=$HOME/rcsc
+2.2 make
+
